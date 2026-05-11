@@ -38,6 +38,27 @@ public class Card {
         return isFaceUp;
     }
 
+    // calculates the point value of the card based on its value. only returns points if the card is face up
+    public int getPointValue() {
+        if (!isFaceUp) {
+            return 0;
+        }
+
+        // face cards are worth 10 points each
+        if (value.equals("J") || value.equals("Q") || value.equals("K")) {
+            return 10;
+        }
+
+        // ace is worth 11 points by default , the Hand class will handle counting it as 1 if I need it
+        if (value.equals("A")) {
+            return 11;
+        }
+
+        // here all number cards are worth their face value
+        return Integer.parseInt(value);
+    }
+
+
 
 
 
