@@ -60,6 +60,36 @@ public class Main {
 
 
 
+        // find the winner by finding the highest score under or equal to 21
+        System.out.println("**** Final Results ***");
+        Hand winner = null;
+        int bestScore = 0;
+
+        for (Hand hand : hands) {
+            hand.displayHand();
+
+            // only consider players who have not busted
+            if (!hand.isBust() && hand.getValue() > bestScore) {
+                bestScore = hand.getValue();
+                winner = hand;
+            }
+        }
+
+// announce the winner
+        if (winner != null) {
+            System.out.println("\nThe winner is " + winner.getPlayerName() + " with " + bestScore + " points!");
+        } else {
+            System.out.println("\nEveryone busted. No winner!");
+        }
+
+        theScanner.close();
+
+
+
+
+
+
+
 
     }
 
