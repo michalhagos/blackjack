@@ -44,6 +44,11 @@ public class Deck {
         }
     }
 
+    // returns how many cards are left in the deck
+    public int getSize() {
+        return cards.size();
+    }
+
 
 
 
