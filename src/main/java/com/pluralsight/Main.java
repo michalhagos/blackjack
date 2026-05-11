@@ -1,5 +1,6 @@
 package com.pluralsight;
 
+import java.util.ArrayList;
 import java.util.Scanner;
 
 public class Main {
@@ -11,7 +12,13 @@ public class Main {
         System.out.print("How many players are playing? ");
         int numberOfPlayers = Integer.parseInt(theScanner.nextLine());
 
-
+// create a hand for each player using their name
+        ArrayList<Hand> hands = new ArrayList<>();
+        for (int i = 0; i < numberOfPlayers; i++) {
+            System.out.print("Enter name for player " + (i + 1) + ": ");
+            String name = theScanner.nextLine();
+            hands.add(new Hand(name));
+        }
 
 
 
