@@ -23,6 +23,13 @@ public class Hand {
     }
 
 
+    // adds a card to the player's hand
+// the card is flipped face up so the player can see it
+    public void deal(Card card) {
+        card.flip();
+        cards.add(card);
+    }
+
 
 
 }
