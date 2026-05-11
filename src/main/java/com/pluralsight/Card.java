@@ -15,6 +15,31 @@ public class Card {
         this.isFaceUp = false;
     }
 
+    // only return the suit if the card is face up, otherwise return # to hide it
+    public String getSuit() {
+        if (isFaceUp) {
+            return suit;
+        } else {
+            return "#";
+        }
+    }
+
+    // only return the value if the card is face up, otherwise return # to hide it
+    public String getValue() {
+        if (isFaceUp) {
+            return value;
+        } else {
+            return "#";
+        }
+    }
+
+    // returns whether the card is face up or not
+    public boolean isFaceUp() {
+        return isFaceUp;
+    }
+
+
+
 
 
 }
