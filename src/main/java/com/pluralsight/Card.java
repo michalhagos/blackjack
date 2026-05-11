@@ -8,7 +8,12 @@ public class Card {
     // tracks whether the card is face up or face down
     private boolean isFaceUp;
 
-
+    // constructor sets the suit and value and cards always start face down when created
+    public Card(String suit, String value) {
+        this.suit = suit;
+        this.value = value;
+        this.isFaceUp = false;
+    }
 
 
 
