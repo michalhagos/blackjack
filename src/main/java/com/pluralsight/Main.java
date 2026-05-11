@@ -25,7 +25,13 @@ public class Main {
         deck.shuffle();
         System.out.println("\nDeck shuffled. Dealing cards...\n");
 
-
+// this deal 2 cards to each player one at a time
+// also deals one round at a time like a real card game
+        for (int i = 0; i < 2; i++) {
+            for (Hand hand : hands) {
+                hand.deal(deck.deal());
+            }
+        }
 
 
 
