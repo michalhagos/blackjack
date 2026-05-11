@@ -59,6 +59,12 @@ public class Card {
     }
 
 
+    // flips the card over and if it was Face down it becomes face up and the other way as well
+    public void flip() {
+        isFaceUp = !isFaceUp;
+    }
+
+
 
 
 
