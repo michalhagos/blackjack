@@ -57,7 +57,14 @@ public class Hand {
         return total;
     }
 
-
+    // displays all cards in the player's hand and their total value
+    public void displayHand() {
+        System.out.println(playerName + "'s hand:");
+        for (Card card : cards) {
+            System.out.println("  " + card.getValue() + " of " + card.getSuit());
+        }
+        System.out.println("  Total: " + getValue());
+    }
 
 
 
