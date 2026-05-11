@@ -1,6 +1,7 @@
 package com.pluralsight;
 
 import java.util.ArrayList;
+import java.util.Collections;
 
 public class Deck {
 
@@ -25,6 +26,17 @@ public class Deck {
             }
         }
     }
+
+    // add a method shuffles the deck into a random order
+// uses Java's builtin Collections.shuffle method
+    public void shuffle() {
+        Collections.shuffle(cards);
+    }
+
+
+
+
+
 
 
 }
