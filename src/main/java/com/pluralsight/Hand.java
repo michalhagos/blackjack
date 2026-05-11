@@ -11,5 +11,15 @@ public class Hand {
     private ArrayList<Card> cards;
 
 
+    // constructor sets the player name and initializes the empty cards list
+    public Hand(String playerName) {
+        this.playerName = playerName;
+        this.cards = new ArrayList<>();
+    }
+
+
+
+
+
 
 }
