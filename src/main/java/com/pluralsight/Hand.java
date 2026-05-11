@@ -66,6 +66,13 @@ public class Hand {
         System.out.println("  Total: " + getValue());
     }
 
+    // returns true if the player's total is over 21
+    public boolean isBust() {
+        return getValue() > 21;
+    }
+
+
+
 
 
 }
