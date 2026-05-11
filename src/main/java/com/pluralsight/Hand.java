@@ -32,4 +32,33 @@ public class Hand {
 
 
 
+    // calculates the total point value of all cards in the hand
+// ace counts as 11 by default
+// if the total is over 21 and there is an ace, it counts as 1 instead
+    public int getValue() {
+        int total = 0;
+        int aceCount = 0;
+
+        // add up all card values and track how many aces we have
+        for (Card card : cards) {
+            total += card.getPointValue();
+            if (card.getValue().equals("A")) {
+                aceCount++;
+            }
+        }
+
+        // if we are over 21 and have aces, count each ace as 1 instead of 11
+        // subtracting 10 changes an ace from 11 to 1
+        while (total > 21 && aceCount > 0) {
+            total -= 10;
+            aceCount--;
+        }
+
+        return total;
+    }
+
+
+
+
+
 }
