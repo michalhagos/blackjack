@@ -33,7 +33,16 @@ public class Deck {
         Collections.shuffle(cards);
     }
 
+    // deals the top card from the deck
+// then removes it from the deck and returns it . returns null if there are no cards left
 
+    public Card deal() {
+        if (cards.size() > 0) {
+            return cards.remove(0);
+        } else {
+            return null;
+        }
+    }
 
 
 
