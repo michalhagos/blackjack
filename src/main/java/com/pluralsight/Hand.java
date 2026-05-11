@@ -17,7 +17,10 @@ public class Hand {
         this.cards = new ArrayList<>();
     }
 
-
+    // returns the name of the player who owns this hand
+    public String getPlayerName() {
+        return playerName;
+    }
 
 
 
