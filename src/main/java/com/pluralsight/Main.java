@@ -20,7 +20,10 @@ public class Main {
             hands.add(new Hand(name));
         }
 
-
+// create a new deck and shuffle it before dealing
+        Deck deck = new Deck();
+        deck.shuffle();
+        System.out.println("\nDeck shuffled. Dealing cards...\n");
 
 
 
