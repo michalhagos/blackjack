@@ -33,7 +33,30 @@ public class Main {
             }
         }
 
+// each player takes their turn choosing to hit or stay
+        for (Hand hand : hands) {
+            hand.displayHand();
 
+            // keep asking the player to hit or stay until they stay or bust
+            while (!hand.isBust()) {
+                System.out.print(hand.getPlayerName() + " - Hit or Stay? (h/s): ");
+                String choice = theScanner.nextLine().trim().toLowerCase();
+
+                if (choice.equals("h")) {
+                    // deal one more card to the player
+                    hand.deal(deck.deal());
+                    hand.displayHand();
+
+                    if (hand.isBust()) {
+                        System.out.println(hand.getPlayerName() + " busted!\n");
+                    }
+                } else {
+                    // player chose to stay
+                    System.out.println(hand.getPlayerName() + " stays with " + hand.getValue() + "\n");
+                    break;
+                }
+            }
+        }
 
 
 
